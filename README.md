@@ -7,13 +7,13 @@
 * [Reducer](#reducer)
 * [Use in component](#Use-in-component)
 
-# How to run this example?
+## How to run this example?
 Just pull and run command:
 ```
 $ npm install
 ```
 
-# Store
+## Store
 Just one object that is the source of truth
 ```
 $ import { createStore } from "redux";
@@ -24,17 +24,17 @@ $ const store = createStore(reducer);
 $ export default store;
 ```
 
-# Action
+## Action
 Here you just describe WHAT are you storing.
 
-## Types
+### Types
 This is your bank of constants for all possible actions
 ```
 $ export const BUG_ADDED = "bugAdded";
 $ export const BUG_REMOVED = "bugRemoved";
 $ export const BUG_RESOLVED = "bugResolved";
 ```
-## Actions
+### Actions
 Describe what would you like to store
 ```
 $ export const bugAdded = (description) => ({
@@ -45,7 +45,7 @@ $  },
 $});
 ```
 
-# Reducer
+## Reducer
 This is the place where you actually edit store state
 ```
 $ import * as actions from "../actions/actionTypes";
@@ -59,7 +59,7 @@ $ case actions.BUG_RESOLVED:
 $ return state; // Edited in some way
 ```
 
-# Use in component
+## Use in component
 First import STORE and ACTIONS
 ```
 import * as actions from "../actions/actions";
