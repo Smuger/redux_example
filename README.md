@@ -1,6 +1,8 @@
 # Simple React JS Redux example
 **Note: functional component + Redux**
 
+![HowItWorks](gif.gif)
+
 ## Table of contents
 * [Store](#store)
 * [Action](#action)
