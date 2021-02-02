@@ -10,18 +10,18 @@
 ## How to run this example?
 Just pull and run command:
 ```
-$ npm install
+npm install
 ```
 
 ## Store
 Just one object that is the source of truth
 ```
-$ import { createStore } from "redux";
-$ import reducer from "../reducers/reducer";
+import { createStore } from "redux";
+import reducer from "../reducers/reducer";
 
-$ const store = createStore(reducer);
+const store = createStore(reducer);
 
-$ export default store;
+export default store;
 ```
 
 ## Action
@@ -30,37 +30,42 @@ Here you just describe WHAT are you storing.
 ### Types
 This is your bank of constants for all possible actions
 ```
-$ export const BUG_ADDED = "bugAdded";
-$ export const BUG_REMOVED = "bugRemoved";
-$ export const BUG_RESOLVED = "bugResolved";
+export const BUG_ADDED = "bugAdded";
+export const BUG_REMOVED = "bugRemoved";
+export const BUG_RESOLVED = "bugResolved";
 ```
 
 ### Actions
 Describe what would you like to store
 ```
-$ export const bugAdded = (description) => ({
-$   type: actions.BUG_ADDED,
-$   payload: {
-$     description,
-$   },
-$ });
+export const bugAdded = (description) => ({
+
+   type: actions.BUG_ADDED,
+   payload: {
+     description,
+   },
+   
+});
 ```
 
 ## Reducer
 This is the place where you actually edit store state
 ```
-$ import * as actions from "../actions/actionTypes";
+import * as actions from "../actions/actionTypes";
 
-$ export default function reducer(state = [], action) {
-$ switch (action.type) {
-$   case actions.BUG_ADDED:
-$     return state; // Edited in some way
-$   case actions.BUG_REMOVED:
-$     return state; // Edited in some way
-$   case actions.BUG_RESOLVED:
-$     return state; // Edited in some way
-$   default:
-$     return state; // return clean state just in case  
+export default function reducer(state = [], action) {
+
+switch (action.type) {
+
+   case actions.BUG_ADDED:
+     return state; // Edited in some way
+   case actions.BUG_REMOVED:
+     return state; // Edited in some way
+   case actions.BUG_RESOLVED:
+     return state; // Edited in some way
+   default:
+     return state; // return clean state just in case
+}
 ```
 
 ## Use in component
