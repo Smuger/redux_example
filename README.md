@@ -34,29 +34,33 @@ $ export const BUG_ADDED = "bugAdded";
 $ export const BUG_REMOVED = "bugRemoved";
 $ export const BUG_RESOLVED = "bugResolved";
 ```
+
 ### Actions
 Describe what would you like to store
 ```
 $ export const bugAdded = (description) => ({
-$  type: actions.BUG_ADDED,
-$  payload: {
-$    description,
-$  },
-$});
+$   type: actions.BUG_ADDED,
+$   payload: {
+$     description,
+$   },
+$ });
 ```
 
 ## Reducer
 This is the place where you actually edit store state
 ```
 $ import * as actions from "../actions/actionTypes";
+
 $ export default function reducer(state = [], action) {
 $ switch (action.type) {
-$ case actions.BUG_ADDED:
-$ return state; // Edited in some way
-$ case actions.BUG_REMOVED:
-$ return state; // Edited in some way
-$ case actions.BUG_RESOLVED:
-$ return state; // Edited in some way
+$   case actions.BUG_ADDED:
+$     return state; // Edited in some way
+$   case actions.BUG_REMOVED:
+$     return state; // Edited in some way
+$   case actions.BUG_RESOLVED:
+$     return state; // Edited in some way
+$   default:
+$     return state; // return clean state just in case  
 ```
 
 ## Use in component
