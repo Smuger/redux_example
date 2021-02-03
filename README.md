@@ -14,6 +14,10 @@ Just pull and run command:
 ```
 npm install
 ```
+and
+```
+npm start
+```
 
 ## Store
 Just one object that is the source of truth
